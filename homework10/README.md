@@ -5,6 +5,9 @@
 
 ### 课程内容2：opencv运行
 
+
+
+
 ![alt text](cat.png)
 ![alt text](cat2.png)
 
@@ -52,4 +55,4 @@ python3 opencv_demo.py
 
 姓名：여세걸
 
-![alt text](download.png)
+![alt text](cat.png)![alt text](cat2.png)
