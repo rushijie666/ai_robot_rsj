@@ -32,3 +32,25 @@ iPhone 和 Android 用的是同一套方案
 姓名：여세걸
 
 ![alt text](_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5281815182100586587&skey=@crypt_ef17b28d_11cad2d0d42f1289c788598f582285c2&mmweb_appid=wx_webfilehelper.jpg)![alt text](_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6165503038694819633&skey=@crypt_ef17b28d_11cad2d0d42f1289c788598f582285c2&mmweb_appid=wx_webfilehelper.jpg)![alt text](<屏幕截图 2026-05-27 135605.png>)
+
+1. ArUco 标记
+ArUco 是一种常用于机器人视觉定位的黑白方形标记。每个标记都有唯一 ID，机器人可以通过摄像头识别 ID 和角点位置。
+
+在本实验中，我使用的标记是：
+
+字典：DICT_4X4_50
+标记 ID：6
+2. ArUco 识别流程
+ArUco 识别过程主要包括：
+
+输入图像
+转换为灰度图
+检测候选方形区域
+解码 ArUco ID
+绘制检测框和 ID 信息
+3. 距离估算方法
+当已知 ArUco 标记的实际宽度时，可以通过图像中的像素宽度估算距离。
+
+基本思路：
+
+```txt 距离 = 实际宽度 × 焦距 / 图像中的像素宽度 
